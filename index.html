@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UltraHardware</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="src/style/header.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+        .caixa {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+        }
+        .caixa1 {
+            background-color: rgba(83, 64, 64, 0);
+            z-index: 2;
+            top: 20px;
+            left: 20px;
+        }
+        .caixa2 {
+           background-color: rgba(68, 26, 26, 0);
+            z-index: 2;
+            top: 50px;
+            left: 50px;
+        }
+        header {
+            position: relative; /* Altere para relativo se não estiver definido */
+            z-index: 10; /* Defina um valor alto para garantir que o cabeçalho esteja sobre outros conteúdos */
+            background-color: rgba(68, 26, 26, 0);/* Defina uma cor de fundo para o cabeçalho para garantir visibilidade */
+        }
+        main {
+            position: relative; /* Defina como relativo para o conteúdo principal, se necessário */
+            z-index: 1; /* Defina um valor baixo para garantir que o conteúdo principal esteja atrás do cabeçalho */
+        }
+        .btn-default {
+            z-index: 5; /* Ajuste conforme necessário para garantir que o botão esteja acima do conteúdo */
+        }
+        /* Adicione estilos para garantir que o menu esteja no topo quando ativado */
+        .nav-links {
+            position: absolute; /* Ou outro valor apropriado */
+            z-index: 20; /* Um valor alto para garantir que o menu de navegação esteja acima de outros conteúdos */
+        }
+        .nav-active {
+            display: block; /* Ajuste conforme necessário para mostrar/ocultar o menu */
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="caixa caixa1"></div>
+    <div class="caixa caixa2"></div>
+    <header>
+        
+        <div class="container">
+            <div class="fa-solid fa-dragon" id="nav_logo">UltraHardware</div>
+            <button class="menu-toggle"><i class="fas fa-bars"></i></button> <!-- Botão para abrir/fechar o menu -->
+            <nav class="nav-links">
+                <ul>
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#about">Mais Produtos</a></li>
+                    <li><a href="#services">Consultoria em Hardware</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <section id="home">
+            <div class="video-wrapper">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/TuawWN0O42E?si=wvwKU4M5HVkZQDqj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </section>
+        
+        <div>
+            <button class="btn-default">
+                <h2>COMPRE AGORA</h2>
+            </button>
+        </div>
+
+        <section id="home">
+            <h2>GABINETE GAMER GLASS 06X RISE MODE</h2>
+            <p>
+                Modelos: Preto - RM-CA-06X-FB, Branco - RM-WT-06X-FW<br><br>
+                Especificações:<br>
+                - Cor: Preto/Branco<br>
+                - Dimensões (L x W x H): L 365mm x W 200mm x H 455mm<br>
+                - Suporte para 6 fans (não inclusos)<br>
+                - Baias: 3.5” HDD (x2) | 2.5” SSD (x3)<br>
+                - Slots de Expansão: 7<br>
+                - Placa-Mãe: ATX / M-ATX / ITX<br>
+                - Fontes de Alimentação: ATX (não inclusa)<br>
+                - Lateral Vidro Fumê<br>
+                - Frontal em Vidro Temperado
+            </p>
+        </section>
+        
+        <section id="about">
+            <h2>Mais Produtos</h2>
+            <p>Gabinete Gamer Rise Mode Galaxy Glass Preto
+                O Gabinete Gamer Rise Mode Galaxy Glass Preto possui design futurista e gamer. Com Lateral e Fronte em Vidro Temperado, tenha maior visibilidade e acesso de todos seus componentes para um visual dinâmico.
+            </p>
+            <img src="gabinete ri.jpeg" alt="Gabinete Gamer" width="370" height="400">
+        </section>
+        
+        <section id="services">
+            <h1>Alto Desempenho</h1>
+            <p>Projetado com material de altíssima qualidade, acabamento premium, Lateral e Frontal em Vidro Temperado, layout de fácil instalação e suporte para até 10 fans.</p>
+            <h1>Design</h1>
+            <p>O Gabinete Gamer Rise Mode Galaxy Glass é Construído na cor branca, e suporte para Placa-Mãe ATX, M-ATX e ITX, e placas de vídeo de até 400mm.</p>
+            <div>
+                <button class="btn-default">
+                    <h2>FRETE GRÁTIS!!</h2>
+                </button>
+            </div>
+            <h2>Consultoria em Hardware</h2>
+            <p>Análise e recomendações sobre as melhores soluções de hardware para diferentes necessidades e orçamentos.</p>
+            <p>Consultoria em Hardware: Substituição e upgrade de componentes em sistemas existentes para melhorar o desempenho ou expandir capacidades.</p>
+            <p>Suporte e Garantia Pós-Venda: Suporte técnico e serviços de garantia para clientes após a compra de hardware, incluindo substituição de peças e assistência em caso de defeitos.</p>
+        </section>
+    </main>
+    
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('nav-active');
+        });
+    </script>
+</body>
+</html>

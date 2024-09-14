@@ -1,0 +1,207 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilização geral */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #ffffffbe;
+    background-color: #09020e;
+    padding-top: 60px; /* Espaço para o cabeçalho fixo */
+    text: #E0E0E0;
+}
+
+/* Cabeçalho */
+header {
+    position: fixed; /* Mantém o cabeçalho fixo no topo */
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: rgba(253, 253, 253, 0); /* Transparente ou ajuste a cor conforme necessário */
+    z-index: 1000; /* Valor alto para garantir que o cabeçalho esteja acima de outros conteúdos */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Container dentro do cabeçalho */
+.container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    position: relative;
+}
+
+/* Logo */
+#nav_logo {
+    font-size: 24px;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Menu de navegação */
+nav {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Botão de menu visível apenas em telas pequenas */
+.menu-toggle {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    display: none; /* Escondido por padrão */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Exibe o botão em telas pequenas */
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 200px; /* Define a largura do menu */
+        position: absolute;
+        top: 60px; /* Ajuste conforme a altura do cabeçalho */
+        right: -200px; /* Esconde o menu fora da tela (lado direito) */
+        background-color: rgba(0, 0, 0, 0.9);
+        transition: right 0.3s; /* Faz a animação do menu a partir da direita */
+        z-index: 1000; /* Garante que o menu esteja acima do conteúdo */
+    }
+
+    nav.nav-active ul {
+        right: 0; /* Mostra o menu quando o botão é clicado, movendo-o para a posição visível */
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/* Estilo do conteúdo principal */
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative; /* Garante que o conteúdo principal esteja corretamente posicionado */
+    z-index: 1; /* Define um valor baixo para estar atrás do cabeçalho */
+}
+
+.video-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.video-wrapper iframe {
+    width: 70%;
+    max-width: 800px;
+    height: 450px;
+    border: none;
+}
+
+/* Botão de preço */
+.btn-default {
+    border: none;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(43, 40, 83);
+    border-radius: 12px;
+    padding: 10px 14px;
+    font-weight: 600;
+    box-shadow: 0px 0px 10px 2px rgb(1, 1, 17);
+    cursor: pointer;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    margin-top: 20px;
+    padding: 15px 30px;
+}
+
+.btn-default:hover {
+    background-color: rgb(61, 150, 88);
+    transform: scale(1.05);
+}
+
+footer {
+    background-color: rgba(61, 25, 25, 0);
+    color: #6e6e6e;
+    text-align: center;
+    padding: 1rem 0;
+    position: relative;
+    width: 100%;
+    border-top: none;
+}
+
+.section {
+    padding: 40px 20px;
+}
+
+h2 {
+    color: #ffffff;
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+
+p {
+    color: #cccccc;
+    line-height: 1.8;
+}
+
+/* Ajuste dos elementos com z-index */
+.elemento {
+    position: relative; /* Pode ser relative, absolute, fixed, ou sticky */
+    z-index: 10; /* Valor do z-index para elementos em geral */
+}
+
+.elemento1 {
+    position: absolute;
+    z-index: 5; /* Valor menor que .elemento2 */
+}
+
+.elemento2 {
+    position: absolute;
+    z-index: 10; /* Valor maior que .elemento1 */
+}
